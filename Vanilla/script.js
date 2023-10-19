@@ -14,7 +14,7 @@ const apiKey = 'd38044d2ec2f1eb501cebf3fc4d5a156';
 
 // Get the city from the URL query string input
 const urlParams = new URLSearchParams(window.location.search);
-var city = urlParams.get('city');
+const city = urlParams.has('city') ? urlParams.get('city') : 'London';
 
 const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 fetch(apiURL)
