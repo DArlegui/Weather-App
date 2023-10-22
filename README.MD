@@ -2,6 +2,8 @@
 
 [Live Demo](https://darlegui-weather-app.netlify.app/)
 
+Module 3 - Using APIs Practice Project
+
 ## Description
 
 My Weather App application allows users to check the weather information for a specific location. It provides real-time weather data, including temperature, humidity, wind speed, and a description of the current weather condition. Users can search for weather information for various locations around the world. Neatly designed using tailwind.
