@@ -1,3 +1,18 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.bg-background {
+  background-image: url('./images/bg2.jpg');
+}
+
+ion-icon[name='rainy'],
+ion-icon[name='thermometer'],
+ion-icon[name='speedometer'] {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
+}
