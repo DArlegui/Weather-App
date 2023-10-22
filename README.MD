@@ -2,7 +2,10 @@
 
 [Live Demo](https://darlegui-weather-app.netlify.app/)
 
-Module 3 - Using APIs Practice Project
+The Following Module 3 Assignments
+
+- Using APIs Practice Project
+- Remake your API Practice Project - in React!
 
 ## Description
 
