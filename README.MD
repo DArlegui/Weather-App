@@ -24,7 +24,7 @@ This project was developed using React and Vanilla JavaScript (each separately w
 
 The Weather App is built using the following framework and libraries:
 
-- [React 17.0.2](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
 
 ### Dependencies
 
