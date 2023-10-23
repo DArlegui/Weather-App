@@ -19,7 +19,7 @@ export default function App() {
     humidity: '',
   });
 
-  const apiKey = 'd38044d2ec2f1eb501cebf3fc4d5a156';
+  const apiKey = 'Your API_KEY';
   console.log(stat);
 
   useEffect(() => {
