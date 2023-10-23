@@ -1,3 +1,4 @@
+import 'dotenv/config';
 const weather_element = document.getElementById('weather');
 const timezone_element = document.getElementById('timezone');
 const weather_description_element = document.getElementById(
@@ -10,23 +11,27 @@ const wind_speed_element = document.getElementById('wind-speed');
 const country_element = document.getElementById('country');
 const town_element = document.getElementById('city');
 
-const apiKey = 'd38044d2ec2f1eb501cebf3fc4d5a156';
+const apiKey = process.env.API_KEY;
 
-// Get the city from the URL query string input
-const urlParams = new URLSearchParams(window.location.search);
-const city = urlParams.has('city') ? urlParams.get('city') : 'London';
+async function fetchData() {
+  try {
+    // Get the city from the URL query string input
+    const urlParams = new URLSearchParams(window.location.search);
+    const city = urlParams.has('city') ? urlParams.get('city') : 'London';
 
-const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-fetch(apiURL)
-  .then((response) => {
+    const apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    const response = await fetch(apiURL);
+
     if (!response.ok) {
       alert('No weather found.');
       return;
     }
-    return response.json();
-  })
-  .then((data) => {
+
+    const data = await response.json();
+
     console.log('Weather Data: ', data);
+
     const weather = data.weather[0].main;
     const weather_description = data.weather[0].description;
     const weather_icon = data.weather[0].icon;
@@ -65,4 +70,9 @@ fetch(apiURL)
     weather_icon_element.forEach((element) => {
       element.src = `https://openweathermap.org/img/wn/${weather_icon}@2x.png`;
     });
-  });
+  } catch (error) {
+    console.error('An error occurred:', error);
+  }
+}
+
+fetchData();
