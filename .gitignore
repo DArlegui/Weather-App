@@ -22,3 +22,28 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#absolute
+/abc/
+# relative
+abc
+./abc
+../
+@/
+#user directory
+~/
+
+# all equivalent
+/Weather-App/a
+a
+./a
+
+a/b/../c
+
+# regular expression
+# '*' Selects all png files in the root of the project
+a/*.png 
+
+a/b*
+
+Vanilla/.env
